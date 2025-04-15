@@ -66,8 +66,15 @@
                 <a href="data_film.php"><i class="ft-film"></i><span class="menu-title">Data Film</span></a>
             </li>
             <li class="nav-item <?= ($current_page == 'riwayat.php') ? 'active' : '' ?>">
-                <a href="riwayat.php"><i class="ft-clock"></i><span class="menu-title">History Pembelian</span></a>
+                <a href="riwayat.php"><i class="ft-clipboard"></i><span class="menu-title">History Pembelian</span></a>
             </li>
+            <li class="nav-item <?= ($current_page == 'scan.php') ? 'active' : '' ?>">
+                <a href="scan.php"><i class="ft-aperture"></i></i><span class="menu-title">Scan Disini</span></a>
+            </li>
+            <li class="nav-item <?= ($current_page == 'logout.php') ? 'active' : '' ?>">
+                <a href="logout.php"><i class="ft-log-out"></i><span class="menu-title">Logout</span></a>
+            </li>
+
         </ul>
     </div>
 

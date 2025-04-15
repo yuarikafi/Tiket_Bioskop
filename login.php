@@ -259,6 +259,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
 				Password
 			</label>
 			<input id="login-input-password" class="login__input" name="password" type="password" />
+			<br>
+			<br>
+			<a style="color: white;" href="forget.php">Lupa Password?</a>
 			<button class="login__submit" type="submit" name="login">Sign in</button>
 			<?php if (isset($error_message)): ?>
 				<div class="alert alert-danger" role="alert">

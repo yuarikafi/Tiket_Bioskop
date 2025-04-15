@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 
@@ -30,7 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
-     <!-- Bootstrap JS (Popper.js sudah termasuk) -->
+    <!-- Bootstrap JS (Popper.js sudah termasuk) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- END Custom CSS-->
 </head>
@@ -38,7 +35,7 @@
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-chartbg" data-col="2-columns">
 
 
-<script>
+    <script>
         const selectedGenres = new Set(); // Menggunakan Set untuk mencegahduplikasi
 
         function addGenre() {
@@ -130,7 +127,17 @@
                                         <td>{$no}</td>
                                         <td><img src='../{$row['poster']}' alt='Poster' width='100'></td>
                                         <td>{$row['nama_film']}</td>
-                                        <td>{$row['judul']}</td>
+                                        <td>
+                                            <div class='deskripsi-container'>
+                                                <span class='deskripsi-short'>";
+                                        echo (strlen($row['judul']) > 100) ? substr($row['judul'], 0, 100) . "..." : $row['judul'];
+                                        echo "</span>";
+                                        if (strlen($row['judul']) > 100) {
+                                            echo "<span class='deskripsi-full d-none'>{$row['judul']}</span>
+                                                <button class='btn btn-link read-more'>Read More</button>";
+                                        }
+                                        echo "</div>
+                                        </td>
                                         <td>{$row['genre']}</td>
                                         <td>{$row['total_menit']}</td>
                                         <td>{$row['usia']}</td>
@@ -179,14 +186,39 @@
                                 <!-- Genre -->
                                 <div class="mb-3">
                                     <label for="genre" class="form-label">Genre</label>
-                                    <select id="genreSelect" class="form-select">
+                                    <select id="genreSelect">
                                         <option value="" disabled selected>Pilih Genre</option>
                                         <option value="Action">Action</option>
                                         <option value="Adventure">Adventure</option>
+                                        <option value="Animation">Animation</option>
+                                        <option value="Biography">Biography</option>
+                                        <option value="Comedy">Comedy</option>
+                                        <option value="Crime">Crime</option>
+                                        <option value="Disaster">Disaster</option>
+                                        <option value="Documentary">Documentary</option>
                                         <option value="Drama">Drama</option>
+                                        <option value="Epic">Epic</option>
+                                        <option value="Erotic">Erotic</option>
+                                        <option value="Experimental">Experimental</option>
+                                        <option value="Family">Family</option>
+                                        <option value="Fantasy">Fantasy</option>
+                                        <option value="Film-Noir">Film-Noir</option>
+                                        <option value="History">History</option>
                                         <option value="Horror">Horror</option>
+                                        <option value="Martial Arts">Martial Arts</option>
+                                        <option value="Music">Music</option>
+                                        <option value="Musical">Musical</option>
+                                        <option value="Mystery">Mystery</option>
+                                        <option value="Political">Political</option>
+                                        <option value="Psychological">Psychological</option>
+                                        <option value="Romance">Romance</option>
                                         <option value="Sci-Fi">Sci-Fi</option>
+                                        <option value="Sport">Sport</option>
+                                        <option value="Superhero">Superhero</option>
+                                        <option value="Survival">Survival</option>
                                         <option value="Thriller">Thriller</option>
+                                        <option value="War">War</option>
+                                        <option value="Western">Western</option>
                                     </select>
                                     <button type="button" class="btn btn-secondary mt-2" onclick="addGenre()">Tambah Genre</button>
                                     <ul id="selectedGenres" class="list-group mt-2"></ul>
@@ -200,7 +232,7 @@
                                 </div>
 
                                 <!-- Total Menit -->
-                                 <div class="mb-3">
+                                <div class="mb-3">
                                     <label for="menit" class="form-label">Total Menit</label>
                                     <input type="number" id="menit" name="menit" class="form-control" required>
                                 </div>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Industro - Industrial HTML Template</title>
+    <title>User | Theater</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -41,49 +41,38 @@
     </div>
     <!-- Spinner End -->
 
-<!-- Navbar Start -->
-<?php
-include 'components/navbar.php'
-?>
-<!-- Navbar End -->
+    <!-- Navbar Start -->
+    <?php
+    include 'components/navbar.php'
+    ?>
+    <!-- Navbar End -->
 
-<!-- table -->
-<div class="container" style="margin-top: 20px;">
+    <!-- table -->
+    <div class="container" style="margin-top: 20px;">
         <table style="width: 100%; border-collapse: collapse;">
             <thead>
                 <tr>
-                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #FF5E14; color: white;">No</th>
-                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color:  #FF5E14; color: white;">Nama Bioskop</th>
+                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #4B4B4B; color: white;">No</th>
+                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #4B4B4B; color: white;">Nama Bioskop</th>
                 </tr>
             </thead>
             <tbody>
                 <tr style="background-color: #f9f9f9;">
                     <td style="border: 1px solid #ddd; padding: 10px;">1</td>
-                    <td style="border: 1px solid #ddd; padding: 10px;">XXI Plaza Indonesia</td>
+                    <td style="border: 1px solid #ddd; padding: 10px;">Kafi Cibubur</td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                    <td style="border: 1px solid #ddd; padding: 10px;">2</td>
+                    <td style="border: 1px solid #ddd; padding: 10px;">Rishqi Cibubur</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-<!-- footer -->
-<?php
-include 'components/footer.php'
-?>
-
-    <!-- Copyright Start -->    
-    <div class="container-fluid copyright bg-dark py-4">
-        <div class="container text-center">
-            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">Vito JS</a>, All Right Reserved.
-            </p>
-        </div>
-    </div>
-    <!-- Copyright End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
-
+    <!-- footer -->
+    <?php
+    include 'components/footer.php'
+    ?>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
